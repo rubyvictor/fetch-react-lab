@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./ProfilesPage.css";
+import ProfilesCard from "../Profiles-Card/ProfilesCard";
 
 class ProfilesPage extends Component {
   constructor() {
@@ -9,7 +11,7 @@ class ProfilesPage extends Component {
   }
 
   componentDidMount() {
-    fetch("https://randomuser.me/api?results=3")
+    fetch("https://randomuser.me/api?results=10")
       .then(data => {
         return data.json();
       })
@@ -19,7 +21,17 @@ class ProfilesPage extends Component {
 
   render() {
     return this.state.profiles.map((profile, i) => {
-      return <li key={i}>{profile.name.first}</li>;
+      return (
+        <div key={i}>
+          <ProfilesCard
+            imageURL={profile.picture.medium}
+            title={profile.name.title+" "+profile.name.first + " "+profile.name.last}
+            location={profile.location.city}
+            email={profile.email}
+            contact={profile.cell}
+          />
+        </div>
+      );
     });
   }
 }
