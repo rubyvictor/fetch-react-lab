@@ -1,17 +1,22 @@
 import React from "react";
+import "./ProfilesCard.css";
 
 const ProfilesCard = props => {
   return (
-    <div>
-      <img
-        src={props.imageURL}
-        alt="profile thumbnail"
-      />
-      <h1>{props.title}</h1>
-      <h2>{"From: "+props.location}</h2>
-      <p>{props.email}</p>
-      <p>{props.contact}</p>
-      
+    <div className="profile-card">
+      <div id="left">
+        <img
+          id="profile-thumbnail"
+          src={props.imageURL}
+          alt="profile thumbnail"
+        />
+      </div>
+      <div id="right">
+        <h1>{props.title}</h1>
+        <h2>{"Of: " + props.location}</h2>
+        <p id="email">{props.email}</p>
+        <p>{props.contact}</p>
+      </div>
     </div>
   );
 };
