@@ -25,7 +25,7 @@ class ProfilesPage extends Component {
         <div key={i}>
           <ProfilesCard
             imageURL={profile.picture.medium}
-            gender={profile.name.title}
+            gender={profile.gender}
             title={profile.name.title+" "+profile.name.first + " "+profile.name.last}
             location={profile.location.city}
             email={profile.email}

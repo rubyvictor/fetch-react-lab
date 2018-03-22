@@ -2,7 +2,7 @@ import React from "react";
 import "./ProfilesCard.css";
 
 const ProfilesCard = props => {
-  const genderColorBasedOnTitle = props.gender === "mr" ? "mr" : "ms";
+  const genderColorBasedOnTitle = props.gender === "male" ? "mr" : "ms";
   return (
     <div className="profile-card">
       <div className={genderColorBasedOnTitle} id="left">
