@@ -11,7 +11,7 @@ class ProfilesPage extends Component {
   }
 
   componentDidMount() {
-    fetch("https://randomuser.me/api?results=10")
+    fetch("https://randomuser.me/api?results=50")
       .then(data => {
         return data.json();
       })
@@ -25,6 +25,7 @@ class ProfilesPage extends Component {
         <div key={i}>
           <ProfilesCard
             imageURL={profile.picture.medium}
+            gender={profile.name.title}
             title={profile.name.title+" "+profile.name.first + " "+profile.name.last}
             location={profile.location.city}
             email={profile.email}

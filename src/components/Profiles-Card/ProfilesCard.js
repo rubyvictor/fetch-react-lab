@@ -2,9 +2,10 @@ import React from "react";
 import "./ProfilesCard.css";
 
 const ProfilesCard = props => {
+  const genderColorBasedOnTitle = props.gender === "mr" ? "mr" : "ms";
   return (
     <div className="profile-card">
-      <div id="left">
+      <div className={genderColorBasedOnTitle} id="left">
         <img
           id="profile-thumbnail"
           src={props.imageURL}

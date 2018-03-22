@@ -20,6 +20,16 @@
   margin-left: 10px;
 }
 
-#email{
-break-inside: avoid-column
+#email {
+  break-inside: avoid-column;
+}
+
+.mr {
+  background-color: aquamarine;
+  border-radius: 10%;
+}
+
+.ms {
+  background-color: lightpink;
+  border-radius: 10%;
 }
