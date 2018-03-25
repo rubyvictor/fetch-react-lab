@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ProfilesPage.css";
-import ProfilesCard from "../Profiles-Card/ProfilesCard";
+import ProfileCard from "../Profiles-Card/ProfileCard";
 
 class ProfilesPage extends Component {
   constructor() {
@@ -26,7 +26,13 @@ class ProfilesPage extends Component {
           <ProfilesCard
             imageURL={profile.picture.medium}
             gender={profile.gender}
-            title={profile.name.title+" "+profile.name.first + " "+profile.name.last}
+            title={
+              profile.name.title +
+              " " +
+              profile.name.first +
+              " " +
+              profile.name.last
+            }
             location={profile.location.city}
             email={profile.email}
             contact={profile.cell}
