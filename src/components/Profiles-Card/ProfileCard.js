@@ -1,7 +1,7 @@
 import React from "react";
-import "./ProfilesCard.css";
+import "./ProfileCard.css";
 
-const ProfilesCard = props => {
+const ProfileCard = props => {
   const genderColorBasedOnTitle = props.gender === "male" ? "mr" : "ms";
   return (
     <div className="profile-card">
@@ -22,4 +22,4 @@ const ProfilesCard = props => {
   );
 };
 
-export default ProfilesCard;
+export default ProfileCard;
