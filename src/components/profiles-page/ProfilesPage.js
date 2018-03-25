@@ -23,7 +23,7 @@ class ProfilesPage extends Component {
     return this.state.profiles.map((profile, i) => {
       return (
         <div key={i}>
-          <ProfilesCard
+          <ProfileCard
             imageURL={profile.picture.medium}
             gender={profile.gender}
             title={
